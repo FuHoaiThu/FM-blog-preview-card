@@ -1,0 +1,47 @@
+:root {
+  --cl-yellow: #f4d04e;
+  --cl-gray-950: #111111;
+  --cl-gray-500: #6b6b6b;
+  --cl-white: #ffffff;
+}
+html {
+  font-family: 'Figtree', sans-serif;
+  font-optical-sizing: auto;
+}
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--cl-gray-950);
+  background-color: var(--cl-yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.text-preset-1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.text-preset-2 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.text-preset-3 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.text-preset-3-bold {
+  font-size: 14px;
+  font-weight: 700;
+}
