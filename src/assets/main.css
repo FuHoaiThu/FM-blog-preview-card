@@ -8,7 +8,11 @@ html {
   font-family: 'Figtree', sans-serif;
   font-optical-sizing: auto;
 }
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 *,
 body {
   margin: 0;
@@ -44,4 +48,16 @@ body {
 .text-preset-3-bold {
   font-size: 14px;
   font-weight: 700;
+}
+@media screen and (max-width: 320px) {
+  .text-preset-3,
+  .text-preset-3-bold {
+    font-size: 12px;
+  }
+  .text-preset-1 {
+    font-size: 20px;
+  }
+  .text-preset-2 {
+    font-size: 14px;
+  }
 }

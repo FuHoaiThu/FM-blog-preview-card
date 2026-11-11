@@ -1,38 +1,38 @@
-# .
+h2. [Frontend Mentor] Blog Preview Card – Vue 3
 
-This template should help get you started developing with Vue 3 in Vite.
+h3. Mục tiêu
 
-## Recommended IDE Setup
+Xây dựng Blog Preview Card bằng Vue 3 + Vite theo Figma/design Frontend Mentor; giao diện responsive, có trạng thái hover/focus và đáp ứng các yêu cầu accessibility cơ bản.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+h3. Tài liệu tham khảo
 
-## Recommended Browser Setup
+* Challenge: https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS
+* Figma: sử dụng file thiết kế đã được cung cấp cho bài tập.
+* Starter: assets/images, assets/fonts, style-guide.md.
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+h3. Yêu cầu chức năng và giao diện
 
-## Customize configuration
+* Hiển thị một blog card gồm: illustration, category (Learning), ngày xuất bản (21 Dec 2023), tiêu đề (HTML & CSS foundations), mô tả và thông tin tác giả (avatar, Greg Hooper).
+* Giao diện bám sát thiết kế desktop (1440px), mobile (375px) và active states.
+* Responsive từ 320px đến màn hình lớn; không tràn ngang, card giữ khoảng cách hợp lý với mép màn hình.
+* Có hover và keyboard focus rõ ràng cho mọi phần tử tương tác thực sự.
+* Sử dụng màu và font Figtree theo style guide; weights 500 và 800.
+* Sử dụng asset từ starter; đường dẫn ảnh hoạt động trong production build.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+h3. Yêu cầu kỹ thuật
 
-## Project Setup
+* Vue 3 + Vite; SCSS; component BlogPreviewCard nhận dữ liệu qua props.
+* Không cần Vue Router hoặc Pinia cho bài tập một trang.
+* Semantic HTML phù hợp (main, article, heading, time); alt hợp lý cho ảnh.
+* Nếu tiêu đề là link, dùng URL hợp lệ và hỗ trợ focus-visible; không dùng link giả.
+* Bảo đảm tương phản màu, thứ tự đọc và khả năng sử dụng bằng bàn phím.
+* Không hardcode đường dẫn src/assets dạng chuỗi trong object; dùng import asset hoặc public URL.
 
-```sh
-npm install
-```
+h3. Acceptance criteria (Definition of Done)
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+* UI bám sát thiết kế desktop/mobile và active states.
+* Hiển thị đầy đủ dữ liệu card, ảnh/font tải đúng trên local và production.
+* Responsive ổn định từ 320px, không tràn ngang.
+* Các phần tử tương tác có hover/focus; semantic và keyboard accessibility cơ bản đạt yêu cầu.
+* Production build thành công, link deploy truy cập được.
+* Repository và README sẵn sàng để submit.

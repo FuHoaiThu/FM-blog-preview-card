@@ -1,4 +1,6 @@
 <script setup>
+import aritcleImg from '@/assets/illustration-article.svg'
+import avatarImg from '@/assets/image-avatar.webp'
 const cardInfo = {
   id: 1,
   category: 'Learning',
@@ -6,10 +8,10 @@ const cardInfo = {
   title: 'HTML & CSS foundations',
   description:
     'These languages are the backbone of every website, defining structure, content, and presentation.',
-  image: '/images/illustration-article.svg',
+  image: aritcleImg,
   author: {
     name: 'Greg Hooper',
-    avatar: '/images/image-avatar.webp',
+    avatar: avatarImg,
   },
 }
 </script>
@@ -17,17 +19,17 @@ const cardInfo = {
 <template>
   <main class="card">
     <div class="card-image">
-      <img src="./assets/illustration-article.svg" alt="Article Illustration" />
+      <img :src="cardInfo.image" alt="Article Illustration" />
     </div>
     <div class="info">
-      <div class="info-category">{{ cardInfo.category }}</div>
-      <div class="info-published-at">{{ cardInfo.publishedAt }}</div>
-      <div class="info-title">{{ cardInfo.title }}</div>
-      <div class="info-description">{{ cardInfo.description }}</div>
-      <!-- <div class="info-author">
-        <img src="{{ cardInfo.author.avatar }}" alt="{{ cardInfo.author.name }}" />
-        <span>{{ cardInfo.author.name }}</span>
-      </div> -->
+      <div class="info-category text-preset-3-bold">{{ cardInfo.category }}</div>
+      <div class="info-published-at text-preset-3">{{ cardInfo.publishedAt }}</div>
+      <div class="info-title text-preset-1">{{ cardInfo.title }}</div>
+      <div class="info-description text-preset-2">{{ cardInfo.description }}</div>
+    </div>
+    <div class="author">
+      <img :src="cardInfo.author.avatar" :alt="cardInfo.author.name" />
+      <span class="text-preset-3-bold">{{ cardInfo.author.name }}</span>
     </div>
   </main>
 </template>
@@ -39,7 +41,7 @@ const cardInfo = {
   border-radius: 20px;
   box-shadow: 8px 8px 0px 0px #000000;
   padding: 20px;
-  width: 336px;
+  width: min(384px, calc(100vw - 48px));
 }
 .card .card-image {
   margin-bottom: 24px;
@@ -47,5 +49,34 @@ const cardInfo = {
 .card .card-image img {
   width: 100%;
   border-radius: 10px;
+  display: block;
+}
+.info {
+  display: flex;
+  color: var(--cl-gray-950);
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.info .info-category {
+  border-radius: 4px;
+  background-color: var(--cl-yellow);
+  padding: 4px 12px;
+  width: fit-content;
+}
+.info .info-description {
+  color: var(--cl-gray-500);
+}
+.info .info-title:hover {
+  color: var(--cl-yellow)
+}
+.author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.author img {
+  width: 32px;
+  height: 32px;
 }
 </style>
